@@ -11,11 +11,11 @@ public:
                 int r = mid;
                 while(nums[l] == target){
                     l--;
-                    if(l<0) break;
+                    if(l<0)break;
                 }
                 while(nums[r] == target){
                     r++;
-                    if(r>nums.size() - 1) break;
+                    if(r>nums.size()-1)break;
                 }
                 // fin.push_back(l);
                 // fin.push_back(r);
