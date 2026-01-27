@@ -9,10 +9,10 @@ public:
                 return mid;
             }
             else if(nums[mid] < target){
-                s++;
+                s = mid + 1;
             }
             else{
-                e--;
+                e = mid - 1;
             }
         }
         return -1;
