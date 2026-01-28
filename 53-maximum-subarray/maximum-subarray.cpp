@@ -5,12 +5,8 @@ public:
         int maxsum = nums[0];
         for(int i = 0; i < nums.size(); i++){
             currentsum += nums[i];
-            if(currentsum > maxsum){
-                maxsum = currentsum;
-            }
-            if(currentsum < 0){
-                currentsum = 0;
-            }
+            maxsum = max(maxsum, currentsum);
+            currentsum = (currentsum < 0)? 0 : currentsum;
         }
         return maxsum;
     }
