@@ -43,6 +43,8 @@ public:
             temp -> next = temp -> next -> next;
             temp = temp -> next;
         }
-        return dummy -> next;
+        Node* fin = dummy -> next;
+        delete dummy;
+        return fin;
     }
 };
