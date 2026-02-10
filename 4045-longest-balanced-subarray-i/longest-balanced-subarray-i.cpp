@@ -5,8 +5,8 @@ public:
         int curr = 0;
         
         for(int i = 0; i < nums.size() - 1; i++){
-            set<int> even;
-            set<int> odd;
+            unordered_set<int> even;
+            unordered_set<int> odd;
             for(int j = i; j <  nums.size(); j++){
                 curr = j - i + 1;
                 if(nums[j] % 2 == 0) even.insert(nums[j]);
