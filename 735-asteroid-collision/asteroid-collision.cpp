@@ -8,11 +8,11 @@ public:
 
             while(!st.empty() && st.top() > 0 && a < 0) {
                 if(st.top() < -a) {
-                    st.pop(); // top explodes
+                    st.pop();
                     continue;
                 }
                 else if(st.top() == -a) {
-                    st.pop(); // both explode
+                    st.pop();
                 }
                 destroyed = true;
                 break;
