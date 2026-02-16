@@ -30,8 +30,8 @@ public:
             }
             fin.push_back(levelSum);
         }
-        sort(fin.begin(), fin.end());
+        sort(fin.rbegin(), fin.rend());
         if(k > fin.size()) return -1;
-        return fin[fin.size() - k];
+        return fin[k - 1];
     }
 };
