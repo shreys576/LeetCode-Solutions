@@ -19,15 +19,15 @@ public:
         q.push(root);
         while(!q.empty()){
             int size = q.size();
-            vector<int> levelElement;
+            int element = 0;
             for(int i = 0; i < size; i++){
                 TreeNode* frontNode = q.front();
                 q.pop();
-                levelElement.push_back(frontNode -> val);
+                element = frontNode -> val;
                 if(frontNode -> left != NULL) q.push(frontNode -> left);
                 if(frontNode -> right != NULL) q.push(frontNode -> right);
             }
-            fin.push_back(levelElement[levelElement.size() - 1]);
+            fin.push_back(element);
         }
         return fin;
     }
