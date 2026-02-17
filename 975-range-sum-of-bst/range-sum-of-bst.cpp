@@ -15,7 +15,7 @@ public:
         int sum = 0;
         if(root == NULL) return 0;
         if(root -> val >= low && root -> val <= high){
-            sum += root -> val;
+            sum = root -> val;
         }
         return sum + rangeSumBST(root -> left, low, high) + rangeSumBST(root -> right, low, high);
     }
