@@ -6,17 +6,11 @@ public:
         for(char i: s){
             freq[i - 'a']++;
         }
-        for(char i : s){
-            if(freq[i - 'a'] == 1){
-                str += i;
-                break; 
+        for(int i = 0; i < s.length(); i++){
+            if(freq[s[i] - 'a'] == 1){
+                return i;
             }
         }
-        if(str.length() > 0){
-            return s.find(str);
-        }
-        else{
-            return -1;
-        }
+        return -1;
     }
 };
